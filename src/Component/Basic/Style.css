@@ -58,7 +58,7 @@
   }
   
   .card-number {
-    margin-top: 15px;
+    margin-top: 0px;
   }
   
   .card-circle {
@@ -120,13 +120,15 @@
   .card-tag {
     float: right;
     margin: 5px 0 0;
-    border: 1px solid #aaa;
+    border: 1px solid rgb(243, 44, 44);
     padding: 5px 10px;
     cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
   }
   
   .card-tag:hover {
-    background: #aaa;
+    background: rgb(54, 211, 36);
     color: black;
   }
   
