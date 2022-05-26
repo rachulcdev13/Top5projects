@@ -26,8 +26,8 @@
   
   .main-card--cointainer {
     display: grid;
-    grid-template-columns: repeat(3, minmax(300px, 500px));
-    grid-gap: 50px;
+    grid-template-columns: repeat(4, minmax(250px, 500px));
+    grid-gap: 10px;
     justify-content: space-around;
   }
   
@@ -78,6 +78,7 @@
     letter-spacing: 0.5px;
     margin: 15px 0 0;
     text-transform: uppercase;
+    color: red;
   }
   
   .card-title {
@@ -160,12 +161,12 @@
   
   .navbar {
     padding-top: 50px;
-    text-align: center;
+    text-align: center; 
   }
   
   .navbar h1 {
     padding-bottom: 20px;
-    text-transform: capitalize;
+    text-transform: capitalize; 
   }
   
   /** button group styles **/
@@ -183,7 +184,8 @@
     font-size: 17px;
     box-shadow: inset 0px 0px 0px -15px rebeccapurple;
     transition: all 300ms ease-out;
-    text-transform: capitalize;
+    text-transform: uppercase;
+    font-weight: bold;
   }
   .btn-group__item:last-child {
     border-top-right-radius: 1rem;

@@ -2,47 +2,36 @@ import React, { useState } from 'react'
 import "./Style.css";
 import Menu from "./MenuApi";
 import MenuCard from './MenuCard';
+import Navbar from './Navbar'; 
+
+const uniqueData = [
+    ...new Set(
+        Menu.map((currVal) => {
+            return currVal.Category;
+        })
+    ),'All'
+];
+console.log(uniqueData);
 
 const Restaurant = () => {
-    const [menuData, setMenuData] = useState(Menu);
-    // console.log(menuData);
-const filterItem = (category) =>{
-const updatedList = Menu.filter((currElem,ind)=>{
-return currElem.category === category 
-})
-setMenuData(updatedList);
-}
+    const [menuData, setMenuData] = useState(Menu); 
+    const [menuList,setMenuList] = useState(uniqueData);
+
+    const filterItem = (category) => {
+        if (category==="All") {
+            setMenuList(Menu);
+            return;
+        }
+
+        const updatedList = Menu.filter((currElem) => {
+            return currElem.Category === category
+        })
+        setMenuData(updatedList);
+    }
 
     return (
         <>
-            <div className='navbar'>
-                <div className='btn-group'>
-                    <button 
-                    className='btn-group__item' 
-                    onClick={()=>filterItem("BreakFast")}>
-                    BreakFast</button>
-
-                    <button 
-                    className='btn-group__item' 
-                    onClick={()=>filterItem("Lounch")}>
-                    Lounch</button>
-
-                    <button 
-                    className='btn-group__item' 
-                    onClick={()=>filterItem("Evening")}>
-                    Evening</button>
-                    
-                    <button 
-                    className='btn-group__item' 
-                    onClick={()=>filterItem("Dinner")}>
-                    Dinner</button>
-
-                    <button 
-                    className='btn-group__item' 
-                    onClick={()=>filterItem("All")}>
-                    All</button>
-                </div>
-            </div>
+            <Navbar filterItem={filterItem} menuList={menuList} />
             <br />
             <MenuCard menuData={menuData} />
 
