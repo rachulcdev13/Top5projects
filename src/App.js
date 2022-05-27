@@ -5,9 +5,10 @@ import React from 'react'
 // import UseReducer from './Component/Hooks/UseReducer';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import "bootstrap/dist/js/bootstrap.min.js";
+// import Todo from "./Component/TodoReact/Todo";
 
-import Todo from "./Component/TodoReact/Todo";
-// import Accordion from 'react-bootstrap/esm/Accordion'; 
+import Weather from './Component/WeatherApp/Weather'; 
+
 const App = () => {
   return (
     <> 
@@ -16,7 +17,8 @@ const App = () => {
       {/* <UseState /> */}
       {/* <UseEffect /> */}
       {/* <UseReducer /> */}
-      <Todo /> 
+      {/* <Todo />  */}
+      <Weather />
 
 
     </>
