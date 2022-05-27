@@ -5,11 +5,11 @@ const Weather = () => {
     const [searchValue,setSearchValue] = useState("Pune");
 
     const Evenetvalue = (event) =>{
-        setSearchValue(event.value.target);
+        setSearchValue(event.target.value);
     }
     const getWeatherInfo = async()=>{
         try {
-            let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid={WriteYourAPIKey}`;
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=fe1b7ab51f89a40908484415ab8bd322`;
 
              const res = await fetch (url);
              const data = await res.json();   
