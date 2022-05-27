@@ -61,8 +61,7 @@ const RemoveAll =()=>{
                   </div>
                 </div>
               )
-            })}
-
+            })} 
 
           </div>
 
